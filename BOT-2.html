@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <script>
+            know = {
+                "hello" : "hi",
+                "how are you?" : "good",
+                "ok" : ":)"
+            };
+            function talk() {
+                var user = document.getElementById("userBox").value;
+                document.getElementById("userBox").value = "";
+                document.getElementById("chatLog").innerHTML += user+"<br>";
+                if (user in know) {
+                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                } else {
+                    document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
+                }
+				
+			
+            } 
+        </script>
+    </head>
+    <body height="100px" width="100%">
+        <p  align="center" id="chatLog"  rows="4" cols="30">- - C H A T - -<br></p>
+        <input align="center" id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+    </body>
+	<section></section>
+	<h6><b>NB</b>
+	<ul>
+	<li>Does Not Work Offline</li>
+	<li>Lower Case Only</li>
+	<li>Shortcuts Not Supported</li>
+	<li>Refresh Frequently</li>
+	</ul>
+	</h6>
+</html>
+
+
+
+<style>
+input {
+position:sticky;
+left:400px;
+top:600%;
+border
+height:500px;
+width:300px;
+line-height:100px;
+border-bottom-color:blue;
+border-left-color:blue;
+border-right-color:blue;
+border-top-color:blue;
+background-color:lightblue;
+}
+p {
+position:fixed;
+left:200px;
+top:6px;
+
+
+border-bottom-color:yellow;
+border-bottom-style:outset;
+border-bottom-width:100px;
+border-left-color:red;
+border-left-style:black;
+border-left-width:200px;
+border-right-color:blue;
+border-right-width:100px;
+border-right-style:dotted;
+border-top-color:green;
+border-top-style:grooved;
+border-top-width:100px;
+background-color:pink;
+height:;
+width:60%;
+border-radius:px;
+}
+h6 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+	height:500px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+	height:500px;
+  }
+}
+
+</style>
